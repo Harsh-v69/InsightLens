@@ -196,16 +196,16 @@ st.markdown(custom_css, unsafe_allow_html=True)
 
 
 # --- Application Title and Description (On the Blue Background) ---
-st.title("📰 InsightLens: News Bias Detector")
+st.title("InsightLens: News Bias Detector")
 st.markdown("Unlock the truth behind news articles. Simply provide a URL or paste text below to analyze its **bias**, **political leaning**, and **source reliability**. Supports Hindi and English!")
 
 st.markdown("---")
 
 # --- Sidebar for Navigation ---
-st.sidebar.title("🚀 Navigation")
+st.sidebar.title("Navigation")
 input_mode = st.sidebar.radio(
     "Choose Input Mode:",
-    ["🔗 Analyze from URL", "📝 Paste Your Own Text"],
+    ["🔗 Analyze from URL", "📝 Paste Text/PDF "],
     index=0, # Default to URL
     key="sidebar_input_mode", # Unique key for radio button
 )
@@ -253,7 +253,7 @@ if input_mode == "🔗 Analyze from URL":
                     with st.container():
                         st.markdown("<h3>🔍 Understanding Your Bias Scores</h3>", unsafe_allow_html=True) # Custom HTML header for styling
                         st.markdown("""
-                        - **Bias Label**: Our AI categorizes the article's overall slant (e.g., Left-Leaning, Neutral).
+                        - **Bias Label**: Categorizes the article's overall slant (e.g., Left-Leaning, Neutral).
                         - **Polarity**: Measures the emotional tone, ranging from -1 (very negative/left) to +1 (very positive/right).
                         - **Subjectivity**: Indicates how opinionated the text is, from 0 (highly objective, factual) to 1 (very subjective, opinion-based).
                         """)
